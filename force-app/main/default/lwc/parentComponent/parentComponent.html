@@ -1,0 +1,33 @@
+<template>
+    <lightning-card  title={cardHeading}>
+        <div class="slds-var-m-around_large">
+            <c-child-parent-component greeting="Khasim" 
+            card-heading="Parent to Child Primitive data passing using @API Decorator"
+            number=20
+            is-valid>
+                
+            </c-child-parent-component>
+            <c-p2c-carousal-component carousal-details={carousalData}></c-p2c-carousal-component>
+
+            <lightning-input label="Enter Percentage" onkeyup={percentProgress} class="slds-m-top_medium"></lightning-input>
+            <c-p2c-progress-bar progress={percentage}>
+                
+            </c-p2c-progress-bar>
+        </div>
+           
+    </lightning-card>
+    <lightning-card title="Child to parent comminication using simple event">
+    
+        <lightning-button label="show Modal" onclick={clickhandler}></lightning-button>
+        <h1>{msg}</h1>
+        <template if:true={showModal}>
+
+        <c-c2p-modal-component onshow={modalclose}></c-c2p-modal-component>
+        </template>
+        
+    </lightning-card>
+
+    <c-lwc-child-comp></c-lwc-child-comp>
+    
+    
+</template>

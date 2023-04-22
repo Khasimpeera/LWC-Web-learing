@@ -1,0 +1,38 @@
+<template>
+    <lightning-card title="Wire with Apex ">
+        <lightning-combobox
+        name="progress"
+        label="Industry"
+        value={selectedindustry}
+        placeholder="Select Progress"
+        options={industryoptions}
+        onchange={handleChange} ></lightning-combobox>
+        <p>Selected value is: {selectedindustry}</p>
+        <template if:true={accounts.data}>
+            <template for:each={accounts.data} for:item="acc">
+                
+                    <div class="slds-box" key={acc.Id}> 
+                        <div>Industry : {acc.Industry}</div>
+                        <div>Account Name: {acc.Name}</div>
+                        
+                    </div>
+                               
+
+            </template>
+        </template>
+    </lightning-card>
+    <!-- <lightning-card title="Wire with Apex functions ">
+        <template if:true={accountlist}>
+            <template for:each={accountlist} for:item="acc">
+                
+                    <div class="slds-box" key={acc.Id}> 
+                        <div>Industry : {acc.newIndustry}</div>
+                        <div>Account Name: {acc.Name}</div>
+                        
+                    </div>
+                               
+
+            </template>
+        </template>
+    </lightning-card> -->
+</template>

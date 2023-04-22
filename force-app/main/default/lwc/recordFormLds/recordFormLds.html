@@ -1,0 +1,34 @@
+<template>
+    <lightning-card title="Base Lightning Components">
+        <lightning-record-form 
+        object-api-name={accountobject}
+        fields={MyFields}
+        onsuccess={handlesuccess}></lightning-record-form>
+    </lightning-card>
+    <lightning-card title="RECORD readonly Lightning Components">
+        <lightning-record-form 
+        record-id="0015g00001Bp5kXAAR"
+        object-api-name={accountobject}
+        mode="readonly"
+        onsuccess={handlesuccess}></lightning-record-form>
+    </lightning-card>
+    <lightning-card title="RECORD edit Lightning Components">
+        <lightning-record-form 
+        record-id="0015g00001Bp5kXAAR"
+        object-api-name={accountobject}
+        mode="edit"
+        columns="2"
+        layout-type="full"
+        onsuccess={handlesuccess}></lightning-record-form>
+    </lightning-card>
+    <lightning-card title="RECORD edit Lightning Components">
+        <lightning-record-form 
+        record-id="0015g00001Bp5kXAAR"
+        object-api-name={accountobject}
+        
+        mode="edit"
+        columns="2"
+        layout-type="Compact"
+        onsuccess={handlesuccess}></lightning-record-form>
+    </lightning-card>
+</template>

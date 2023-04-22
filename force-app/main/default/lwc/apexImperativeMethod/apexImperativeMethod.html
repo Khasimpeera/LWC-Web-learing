@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Imperative APex Method">
+        <lightning-button 
+        label="Accounts"
+        name="Account"
+        onclick={clickhandler}></lightning-button>
+        <template if:true={accounts}>
+            <template for:each ={accounts} for:item="acc">
+                <div key={acc.Id}>{acc.Name}</div>
+            </template>
+
+        </template>
+    </lightning-card>
+    <lightning-card title="Imperative APex Method">
+        <lightning-input type="search" label="search Account Name" onchange={handlechange}
+        value={searchkey}></lightning-input>
+        <template if:true={searchAcc}>
+            <template for:each ={searchAcc} for:item="acc">
+                <div key={acc.Id}>{acc.Name}</div>
+            </template>
+
+        </template>
+    </lightning-card>
+    
+</template>

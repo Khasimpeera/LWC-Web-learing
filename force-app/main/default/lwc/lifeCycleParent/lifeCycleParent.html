@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="life cycle from Parent comp">
+        <div class="slds-m-around_medium">Component life Cycle
+            <template if:true={isVisibleChild}>
+                
+                <c-life-cycle-child></c-life-cycle-child>
+                <lightning-button label="remove Child"
+                variant="brand"
+                class="slds-m-left_x-small"
+                onclick={clickhandler}></lightning-button>
+            </template>
+
+            <template if:false={isVisibleChild}>
+                <lightning-button label="Show Child"
+                variant="brand"
+                class="slds-m-left_x-small"
+                onclick={clickhandler}></lightning-button>
+
+            </template>
+            
+            <!-- <input type="text" onkeyup={changehandler}/>
+            {name} -->
+        
+    </div>
+    </lightning-card>
+    
+</template>

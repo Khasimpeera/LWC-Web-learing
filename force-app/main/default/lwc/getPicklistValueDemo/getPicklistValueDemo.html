@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Picklist value by @wire ,GetOBJECT INFO API">
+        <lightning-combobox
+        name="progress"
+        label="Industry"
+        value={selectedindustry}
+        placeholder="Select Progress"
+        options={industryoptions}
+        onchange={handleChange} ></lightning-combobox>
+
+        <p>Selected value is: {selectedindustry}</p>
+    </lightning-card>
+    <lightning-card title="Account Type Picklist">
+        <lightning-combobox
+        name="progress"
+        label="Industry"
+        value={selectedType}
+        placeholder="Select Progress"
+        options={typeoptions}
+        onchange={typeChange} ></lightning-combobox>
+
+        <p>Selected Type is: {selectedType}</p>
+    </lightning-card>
+</template>
